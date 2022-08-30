@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+<body>
+    Receba o valor de referência por grama de sorvete.<input id="ipt_valor"> <br>
+    Receba o peso do sorvete (quantidade de gramas) <input id="ipt_peso"> <br>
+    Receba o tipo de cobertura.<input id="ipt_cobertura"> <br>
+    Receba o tipo de sorvete. <input id="ipt_sorvete"> <br>
+    <button onclick="Calcular()"> Custo Total</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function Calcular() {
+    var gourmet = Number(ipt_peso.value) * 0.11 
+    var Gourmet = Number(ipt_valor.value) - 0.10
+    var preco = gourmet * Gourmet
+    var cober_C = ipt_cobertura * 0.01
+    var custo = gourmet * Gourmet * preco * cober_C * Number(ipt_sorvete.value)
+
+    if (custo > 10) {
+        div_mensagem.innerHTML = `O seu sorvete vai custar mais que R$ 99.00 e vai comprometer a mesada`
+    } else {
+        div_mensagem.innerHTML =`Hoje você está manerando hoje, gastou somente R$99,99.`
+    }
+    }
+</script>

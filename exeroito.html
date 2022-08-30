@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+</head>
+<body>
+    Quantidade de homens que entraram no elevador?<input id="ipt_homem" type="">
+    Quantidade de mulheres que entraram no elevador?<input id="ipt_mulher"  type="text">
+    <button onclick="Analisarpeso()">Analisar Peso</button>
+    <div id="div_mens"></div>
+</body>
+</html>
+
+<script>
+    function Analisarpeso() {
+        var homens = Number(ipt_homem.value) * 80
+        var mulheres = Number(ipt_mulher.value) * 60
+        var total = homens * mulheres 
+
+        if (total > 800) {
+            div_mens.innerHTML = `Será necessário descer alguém para que o elevador se movimente ${total} ` 
+        } else {
+            total = total < 800
+            div_mens.innerHTML = `Será necessário descer alguém para que o elevador se movimente ${total} ` 
+        }
+    }
+</script>

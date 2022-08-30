@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+    <style>
+
+    </style>
+
+    
+
+    O valor da renda familiar? <input id="ipt_renda" type="text">
+    O valor da prestação?<input id="ipt_prestacao">
+    <button onclick="Verificar()" >Verificar Financiamento</button>
+    <div id="div_mens"></div>
+</body>
+</html>
+
+<script>
+    function Verificar() {
+        var verificando = Number(ipt_prestacao.value) / Number(ipt_renda.value) * 100
+        if (verificando > 0.30) {
+            div_mens.innerHTML = `A prestação corresponde a ${verificando}%`
+        } else {
+            verificando < 0.30
+            div_mens.innerHTML =  `Será Necessário complementar a renda famíliar: ${verificando}%` 
+        }
+    }
+</script>

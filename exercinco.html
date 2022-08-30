@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    
+    quantidade de kWh consumida no mês<input id="ipt_qut" >
+    <button onclick="CalcularLuz()"> Calcular conta de luz</button>
+    <div id="div_mens"></div>
+</body>
+</html>
+
+<script>
+    function CalcularLuz() {
+        var mensal = Number(ipt_qut.value) * 0.85
+        var desconto = mensal * 0.90
+        if (mensal < 100) {
+            desconto = mensal * 0.90
+            div_mens.innerHTML = `A sua quantidade de kwh é: ${mensal}, ${desconto}`
+        } else {
+            desconto = mensal
+            div_mens.innerHTML =  `A sua quantidade de kwh é: ${mensal}, ${desconto}`
+        }
+    }
+</script>
